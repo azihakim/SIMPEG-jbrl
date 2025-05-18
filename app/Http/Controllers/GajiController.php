@@ -17,6 +17,9 @@ class GajiController extends Controller
     public function index()
     {
         $gaji = Gaji::with('user.karyawan')->get();
+        if (auth()->user()->role == 'karyawan') {
+            $gaji = $gaji->where('user_id', auth()->user()->id);
+        }
         $gaji->transform(function ($item) {
             $item->tgl_gajian = Carbon::parse($item->tgl_gajian)->translatedFormat('d F Y');
             return $item;

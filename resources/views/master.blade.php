@@ -175,12 +175,6 @@
 									<p>PHK</p>
 								</a>
 							</li>
-							<li class="nav-item">
-								<a href="{{ route('gaji.index') }}" class="nav-link">
-									<i class="nav-icon fas fa-credit-card"></i>
-									<p>Gaji</p>
-								</a>
-							</li>
 						@endif
 						@if (auth()->user()->role == 'manajer')
 							<li class="nav-item">
@@ -253,6 +247,12 @@
 							</li>
 						@endif
 
+						<li class="nav-item">
+							<a href="{{ route('gaji.index') }}" class="nav-link">
+								<i class="nav-icon fas fa-credit-card"></i>
+								<p>Gaji</p>
+							</a>
+						</li>
 						{{-- @endif --}}
 
 						<li class="nav-item">
