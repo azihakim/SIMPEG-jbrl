@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('tgl_masuk');
             $table->string('pendidikan_terakhir');
             $table->string('jabatan');
-            $table->float('gaji_pokok')->nullable();
+            $table->decimal('gaji_pokok', 15, 2)->nullable();
             // $table->string('divisi');
             $table->timestamps();
         });
