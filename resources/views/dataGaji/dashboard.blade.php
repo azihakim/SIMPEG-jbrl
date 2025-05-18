@@ -49,7 +49,7 @@
 											aria-expanded="false">
 										</button>
 										<div class="dropdown-menu" role="menu">
-											<a class="dropdown-item" href="{{ route('gaji.edit', $item->id) }}">Edit</a>
+											{{-- <a class="dropdown-item" href="{{ route('gaji.edit', $item->id) }}">Edit</a> --}}
 											<form action="{{ route('gaji.destroy', $item->id) }}" method="POST"
 												onsubmit="return confirm('Yakin ingin menghapus data ini?');">
 												@csrf

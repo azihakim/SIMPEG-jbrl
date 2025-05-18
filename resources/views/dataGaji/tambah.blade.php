@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Form Tambah PHK')
+@section('title', 'Form Gaji')
 @section('content')
 	<div class="card card-primary">
 		@if (session('error'))

@@ -160,7 +160,8 @@ class GajiController extends Controller
      */
     public function destroy(Gaji $gaji)
     {
-        //
+        $gaji->delete();
+        return redirect()->route('gaji.index')->with('success', 'Data gaji berhasil dihapus.');
     }
 
     public function cetakSlip($id)
