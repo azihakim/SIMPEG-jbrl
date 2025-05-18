@@ -170,4 +170,3 @@ class GajiController extends Controller
         return view('dataGaji.cetak-slip', compact('gaji'));
     }
 }
-1
