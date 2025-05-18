@@ -222,7 +222,7 @@
 								$('#table_bonus tbody').empty();
 								$('#table_potongan tbody').empty();
 								$('#slipGaji').addClass('d-none');
-								alert(response.message);
+								// alert(response.message);
 							}
 						},
 						error: function() {
