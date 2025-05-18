@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Dashboard Promosi')
+@section('title', 'Dashboard Gaji')
 @section('btn-table', 'print')
 @section('content')
 	<div class="container-fluid">
@@ -8,7 +8,7 @@
 				{{-- @if (auth()->user()->jabatan == 'Admin') --}}
 				<div class="row">
 					<div class="col-sm-10">
-						<h2>Promosi</h2>
+						<h2>Gaji</h2>
 					</div>
 					<div class="col-sm-2">
 						<a type="button" class="btn btn-block btn-outline-primary" href="{{ route('gaji.create') }}">Tambah Data</a>
