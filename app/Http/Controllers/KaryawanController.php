@@ -15,7 +15,7 @@ class KaryawanController extends Controller
     {
         // $karyawan = Karyawan::all();
         $karyawan = User::join('karyawans', 'karyawans.user_id', '=', 'users.id')
-        ->get();
+            ->get();
         return view('karyawan.dashboard', compact('karyawan'));
     }
     public function dashboard()
@@ -37,9 +37,9 @@ class KaryawanController extends Controller
         // $data = User::join('phks','phks.user_id','=', 'users.id')->get();
 
         $data = User::join('recruitments', 'recruitments.user_id', '=', 'users.id')
-        ->where('role', 'pelamar')
-        ->where('status', 'Diterima')
-        ->get();
+            ->where('role', 'pelamar')
+            ->where('status', 'Diterima')
+            ->get();
         // $data = User::all();
         return view('karyawan.tambah', compact('data'));
     }
@@ -58,7 +58,7 @@ class KaryawanController extends Controller
         $karyawan->jenis_kelamin = $request->jenis_kelamin;
         $karyawan->status = "Aktif";
         $karyawan->user_id = $request->user_id;
-
+        $karyawan->gaji_pokok = $request->gaji_pokok;
         $userId = $request->input('user_id');
         $user = User::find($userId);
         $user->update(['role' => 'karyawan']);
@@ -107,7 +107,7 @@ class KaryawanController extends Controller
         $karyawan->jabatan = $request->jabatan;
         $karyawan->jenis_kelamin = $request->jenis_kelamin;
         $karyawan->status = $request->status;
-
+        $karyawan->gaji_pokok = $request->gaji_pokok;
         $karyawan->save();
 
         $user = User::find($karyawan->user_id);

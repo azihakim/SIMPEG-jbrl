@@ -51,5 +51,8 @@ class User extends Authenticatable
     //     return $this->hasMany(Recruitment::class);
     // }
 
-
+    public function karyawan()
+    {
+        return $this->hasOne(Karyawan::class);
+    }
 }
