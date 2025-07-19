@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PT PMO</title>
+	<title>SBE</title>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
@@ -90,21 +90,21 @@
 
 			@if (auth()->user()->role == 'pelamar')
 				<a href="{{ url('/pengajuan') }}" class="brand-link">
-					<img src="{{ asset('vendors/dist/img/123.jpeg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+					<img src="{{ asset('vendors/dist/img/123.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
 						style="opacity: .8">
-					<span class="brand-text font-weight-light">PT PMO</span>
+					<span class="brand-text font-weight-light">SBE</span>
 				</a>
 			@elseif(auth()->user()->role == 'karyawan')
 				<a href="{{ url('/karyawanlogin') }}" class="brand-link">
-					<img src="{{ asset('vendors/dist/img/123.jpeg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+					<img src="{{ asset('vendors/dist/img/123.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
 						style="opacity: .8">
-					<span class="brand-text font-weight-light">PT PMO</span>
+					<span class="brand-text font-weight-light">SBE</span>
 				</a>
 			@else
 				<a href="{{ url('/admin') }}" class="brand-link">
-					<img src="{{ asset('vendors/dist/img/123.jpeg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+					<img src="{{ asset('vendors/dist/img/123.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
 						style="opacity: .8">
-					<span class="brand-text font-weight-light">PT PMO</span>
+					<span class="brand-text font-weight-light">SBE</span>
 				</a>
 			@endif
 
